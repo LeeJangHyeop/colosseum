@@ -19,6 +19,8 @@
 
             // open modal when have no authentication
             var modalInstance = $uibModal.open({
+                animation: true,
+                backdrop: 'static',
                 templateUrl: '/templates/login',
                 controller: 'LoginController',
                 controllerAs: 'vm',
@@ -27,6 +29,12 @@
                         return vm;
                     }
                 }
+            });
+
+            modalInstance.result.then(function () {
+                console.log("!")
+            }, function () {
+                console.log("!@")
             });
         }
     }

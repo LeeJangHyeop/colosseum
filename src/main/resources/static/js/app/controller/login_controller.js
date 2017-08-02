@@ -20,10 +20,9 @@
         }
 
         function login() {
-
+            console.log("login!")
         }
         function close() {
-            $uibModalInstance.dismiss('cancel');
         }
     }
 })();
